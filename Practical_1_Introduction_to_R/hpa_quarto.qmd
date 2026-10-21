@@ -1,0 +1,18 @@
+---
+title: "HPA Analysis"
+author: "Joshua Ho"
+---
+
+The Human Protein Atlas (HPA) recorded the amount of regionally elevated genes in various species. I want to find out which species out of humans, pigs, and mice had the highest number of regionally elevated genes.
+
+```{r}
+# re stands for "regionally elevated genes"
+re_human <- sum(180, 83, 57, 110)
+re_pig <- sum(109, 157, 31, 45)
+re_mouse <- sum(55, 185, 60, 98)
+print(paste("In humans:", re_human))
+print(paste("In pigs:", re_pig))
+print(paste("In mice:", re_mouse))
+```
+
+Human forebrains have the most regionally elevated genes.
