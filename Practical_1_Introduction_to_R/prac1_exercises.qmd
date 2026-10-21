@@ -2,6 +2,11 @@
 title: "Practical 1 Exercise"
 author: "Joshua Ho"
 ---
+```{r}
+library(tidyverse)
+library(gt)
+```
+
 A bunch of functions:
 
 ```{r}
@@ -55,5 +60,23 @@ num_cells_before_2 <- 8123
 # num_cells_after
 num_cells_after_1 <- 1432
 num_cells_after_2 <- 7543
+```
+
+Going onto part 4:
+
+```{r}
+# Combining into vectors
+
+column_1 <- c(cell_ID_1, cell_ID_2)
+print(column_1)
+
+column_2 <- c(treated_1, treated_2)
+print(column_2)
+
+column_3 <- c(num_cells_before_1, num_cells_before_2)
+print(column_3)
+
+column_4 <- c(num_cells_after_1, num_cells_after_2)
+print(column_4)
 ```
 
