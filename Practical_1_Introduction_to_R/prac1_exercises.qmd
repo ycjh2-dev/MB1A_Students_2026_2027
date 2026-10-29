@@ -79,4 +79,27 @@ print(column_3)
 column_4 <- c(num_cells_after_1, num_cells_after_2)
 print(column_4)
 ```
+An exercise on indexing:
+
+```{r}
+all_my_pets <- c("dog", "horse", "guinea pig", "chicken", "cat")
+
+pet_4 <- (all_my_pets[4])
+print(pet_4)
+```
+
+Creating nice tables:
+
+```{r}
+mr_tibbles <- tibble(
+  cell_ID = column_1,
+  treated = column_2,
+  num_cells_before = column_3,
+  num_cells_after = column_4
+)
+
+gt(mr_tibbles)
+```
+
+
 

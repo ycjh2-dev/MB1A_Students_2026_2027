@@ -1,0 +1,37 @@
+---
+title: "UKHSA Data Analysis"
+author: "Joshua Ho"
+format: html
+---
+
+```{r}
+library(tidyverse)
+library(gt)
+```
+
+Loading and viewing CSV of COVID-19 case rates per 100000 in population in the rolling 7-day period ending on date shown, from UKHSA website:
+
+```{r}
+COVID_19_case_rates <- read_csv("data/ukhsa-chart-download-COVID19-case-rates.csv")
+
+gt(head(COVID_19_case_rates, n = 3))
+# head() just visualises the first n lines of a table, default being 10
+```
+
+Plotting a table based on the UKHSA data:
+
+```{r}
+# ggplot() initiates a blank canvas and specifies data frame ie CSV to be used
+# aes() allows for the axes to be set
+# + afterwards allows for more layers to be added to the plot
+# geom_line() plots the line
+
+ggplot(COVID_19_case_rates, aes(
+  x = date,
+  y = metric_value
+)) +
+  geom_line(colour = "purple") +
+  xlab("Date") +
+  ylab("Case rates per 100000 (7-day rolling average)") +
+  ggtitle("COVID-19 case rates")
+```
